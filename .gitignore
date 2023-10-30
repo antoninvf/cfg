@@ -1,0 +1,19 @@
+*
+
+!*/
+
+
+# track this file
+
+
+!.gitignore
+
+
+# whitelist everything in ./config/
+
+
+!i3/*
+!dunst/*
+!rofi/*
+!Thunar/*
+!.xintrc
