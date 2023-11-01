@@ -284,15 +284,13 @@ for_window [instance="^sun-awt-X11-XDialogPeer$" title="^Complete Installation$"
 # Floating
 for_window [class="Thunar"] floating enable
 for_window [class="Xarchiver"] floating enable
-for_window [class="Seahorse"] floating enable
 for_window [class="Nitrogen"] floating enable
-for_window [class="7zfm"] floating enable
 for_window [class="Nvidia-settings"] floating enable
 for_window [class="Image Lounge"] floating enable
 for_window [class="Pavucontrol"] floating enable, move position mouse, sticky enable
 for_window [class="Blueberry.py"] floating enable
 for_window [class="ProtonUp-Qt"] floating enable
-for_window [class="SGDBoop"] floating enable
+for_window [class="SGDBoop"] floating
 for_window [class="Fr.handbrake.ghb"] floating enable
 for_window [class="PrismLauncher"] floating enable
 
