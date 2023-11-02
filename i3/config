@@ -9,13 +9,12 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-for_window [class="firefox"] default_border normal
 set $mod Mod1
 set $modsec Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Mononoki Nerd Font Bold 10
+font pango:Lexend Nerd Font Bold 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -237,18 +236,20 @@ gaps inner 5
 smart_gaps on
 
 # top bar
-bar {
-        i3bar_command i3bar
-        status_command SCRIPT_DIR=~/.config/i3blocks/blocklets i3blocks
-        
-        colors {
-                background #111111
-        }
-        tray_output primary
-        tray_padding 3px
-        position top
-        font pango:CaskaydiaCove NFP Bold 10
-}
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# old bar
+#bar {
+#        i3bar_command i3bar
+#        status_command SCRIPT_DIR=~/.config/i3blocks/blocklets i3blocks
+#        
+#        colors {
+#                background #111111
+#        }
+#        tray_output primary
+#        tray_padding 3px
+#        position top
+#        font pango:CaskaydiaCove NFP Bold 10
+#}
 
 ## Binds
 
@@ -281,6 +282,9 @@ for_window [class="steam"] layout tabbed # ease of use
 for_window [class="^com-intellij-updater-Runner$" title="^Update$"] floating enable
 for_window [instance="^sun-awt-X11-XDialogPeer$" title="^Complete Installation$"] floating enable
 
+# fixes firefox border
+for_window [class="firefox"] default_border normal
+
 # Floating
 for_window [class="Thunar"] floating enable
 for_window [class="Xarchiver"] floating enable
@@ -293,6 +297,14 @@ for_window [class="ProtonUp-Qt"] floating enable
 for_window [class="SGDBoop"] floating
 for_window [class="Fr.handbrake.ghb"] floating enable
 for_window [class="PrismLauncher"] floating enable
+for_window [class="Font-manager"] floating enable
+
+# Removes borders on all windows
+for_window [class="^.*"] border pixel 1
+
+# Add titlebars to floating windows
+for_window [floating] border normal
+
 
 # AUTOSTART
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
