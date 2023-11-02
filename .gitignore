@@ -18,3 +18,5 @@
 !Thunar/*
 !.xintrc
 !kitty/*
+!polybar/*
+!picom.conf
