@@ -16,7 +16,7 @@
 !dunst/*
 !rofi/*
 !Thunar/*
-!.xintrc
+!.xinitrc
 !kitty/*
 !polybar/*
 !picom.conf
